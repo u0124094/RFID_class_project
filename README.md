@@ -1,7 +1,12 @@
-## Welcome to linzino's project  ##
+## Welcome to team4's project  ##
 
-**資2b 0124012 林建興**
+# teamleader : #
+# **資2b 0124016 曾柏勳** #
 
-### TEXT1 ###
+**資2b 0124012 林建興**<br>
+**資2b 0124094 陳義勇**<br>
+**資2b 0124092 劉晉維**<br>
 
-this is test.
+### subject ###
+
+code
