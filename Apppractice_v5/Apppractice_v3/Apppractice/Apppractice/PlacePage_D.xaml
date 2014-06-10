@@ -1,0 +1,58 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="Apppractice.Assets.PlacePage_D"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Apppractice.Assets"
+    xmlns:common="using:Apppractice.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">My Application</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="608" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="1346">
+            <StackPanel HorizontalAlignment="Left" Height="477" Margin="608,9,0,0" VerticalAlignment="Top" Width="728">
+                <TextBlock TextWrapping="Wrap" Text="外語學院" Height="76" FontSize="48"/>
+                <TextBlock TextWrapping="Wrap" Text="包含系所有：應用英語系、應用日語系、應用德語系" Height="94" FontSize="24"/>
+                <TextBlock TextWrapping="Wrap" Text="學院特色：本院設有應用英語、應用日語與應用德語三系所，以培養專業外語人才為宗旨。為因應產業多元需求，本院整合校內現有資源規劃應用語言、商業管理、電子商務 『三合一』學程，提供多元而完整之專業外語知識與技能培訓課程。除一般課程，亦規畫交換學生計畫，讓學生能到海外姊妹學校修課，親身體驗當地文化，強化外語學習動機，進而提昇外語學習成就。順應全球化潮流，本院亦提供師資支援校內第二外語課程、院通識課程﹝如語言與文化、世界文化導論、文創發展實務﹞、以及博雅通識課程﹝如日本文化與社會、德國文化與社會﹞，進而培養其多元文化之溝通能力。教學硬體設備包括多媒體英語自學中心、口譯教室、語言視聽教室等專業數位語言教室。讓三系所學生在設備先進而完善之外語訓練環境充份學習與演練。" Height="304" FontSize="20"/>
+            </StackPanel>
+        </Grid>
+        <GridView HorizontalAlignment="Left" Height="405" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="487">
+            <Image Height="375" Width="462" Source="Assets/D.bmp"/>
+        </GridView>
+    </Grid>
+</Page>
